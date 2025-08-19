@@ -1,0 +1,8 @@
+creating a class MenuManager that manages all the menues and manage navigation between them
+
+creating a menu that represents the base menu class
+
+
+creating the inherited menu classes (like welcome menu, login menu, deposit menu)
+
+

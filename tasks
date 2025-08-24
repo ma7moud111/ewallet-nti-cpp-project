@@ -2,7 +2,17 @@ creating a class MenuManager that manages all the menues and manage navigation b
 
 creating a menu that represents the base menu class
 
-
 creating the inherited menu classes (like welcome menu, login menu, deposit menu)
 
 
+try to abstract the menus and handle the navigation between menus
+
+
+tips to edit:
+------------
+
+
+- exceptions used for external events or unexpected events
+- error catch trivial methods used for user errors (expected events)
+- base class must have virtual destructor
+- get the value of the instruction or assembl

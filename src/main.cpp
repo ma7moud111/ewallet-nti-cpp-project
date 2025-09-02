@@ -1,9 +1,7 @@
-#include "menu_manager.h"
-#include "menu.h"
+#include "Application.h"
 
 int main() {
-    MenuManager manager;
-    manager.ChangeMenu(new WelcomeMenu(manager));
-    manager.Run();
+    Application app;
+    app.start();
     return 0;
 }

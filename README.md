@@ -52,16 +52,16 @@ The application creates CSV files:
 **users.csv**:
 ```
 username,password
-alice,password123
-bob,mypassword
+mahmoud,password123
+sayed,mypassword
 ```
 
 **transactions.csv**:
 ```
 type,amount,description,timestamp,status,username
-Deposit,100.00,Deposit transaction,1640995200,Completed,alice
-Transfer,25.50,Transfer to bob,1640995300,Completed,alice
-Transfer,-25.50,Transfer from alice,1640995300,Completed,bob
+Deposit,100.00,Deposit transaction,1640995200,Completed,mahmoud
+Transfer,25.50,Transfer to bob,1640995300,Completed,mahmoud
+Transfer,-25.50,Transfer from alice,1640995300,Completed,sayed
 ```
 
 ## Architecture

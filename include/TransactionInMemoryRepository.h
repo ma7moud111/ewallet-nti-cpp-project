@@ -9,4 +9,5 @@ private:
 public:
     void addTransaction(const TransactionDetails& tx) override;
     std::vector<TransactionDetails> getAllTransactions() const override;
+    std::vector<TransactionDetails> getTransactionsByUser(const std::string& username) const override;
 };

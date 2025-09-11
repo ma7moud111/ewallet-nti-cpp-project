@@ -1,34 +1,30 @@
 #pragma once
-#include "Menu.h"
-#include "AuthenticationService.h"
-#include "Settings.h"
-#include "User.h"
-#include "TransactionRepository.h"
-#include "TransactionService.h"
-#include "Localizer.h"
 #include <memory>
+#include <string>
+
+class Menu;
+class ApplicationResources;
+class TransactionService;
+class User;
 
 class MenuManager {
 private:
-    Menu* currentMenu;
-    AuthenticationService& authService;
-    Settings& settings;
+    std::unique_ptr<Menu> currentMenu;
+    ApplicationResources& resources;
     std::unique_ptr<User> currentUser;
-    std::unique_ptr<TransactionRepository> txRepo;
     std::unique_ptr<TransactionService> txService;
-    std::unique_ptr<Localizer> localizer;
 
 public:
-    MenuManager(AuthenticationService& as, Settings& s);
-    ~MenuManager();
-    void ChangeMenu(Menu* newMenu);
+    explicit MenuManager(ApplicationResources& res);
+    ~MenuManager(); // Need explicit declaration for unique_ptr with incomplete types
+    
+    void ChangeMenu(std::unique_ptr<Menu> newMenu);
     void Run();
-    void login(const std::string& uname);
+    void login(const std::string& username);
     void logout();
+    
     User& getUser();
     TransactionService& getTransactionService();
-    AuthenticationService& getAuthService();
+    ApplicationResources& getResources() { return resources; }
     bool isLoggedIn() const;
-    Localizer& getLocalizer();
-    Settings& getSettings() { return settings; }
 };

@@ -1,21 +1,16 @@
 #pragma once
+#include <memory>
 
-class Settings;
-class Localizer;
-class UserRepository;
-class AuthenticationService;
+class ApplicationResources;
 class MenuManager;
 
 class Application {
 private:
-    Settings* settings;
-    Localizer* localizer;
-    UserRepository* userRepo;
-    AuthenticationService* authService;
-    MenuManager* menuManager;
+    std::unique_ptr<ApplicationResources> resources;
+    std::unique_ptr<MenuManager> menuManager;
 
 public:
     Application();
-    ~Application();
+    ~Application(); 
     void start();
 };

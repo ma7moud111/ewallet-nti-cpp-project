@@ -1,25 +1,29 @@
 #ifndef TRANSACTION_DETAILS_H
 #define TRANSACTION_DETAILS_H
-
 #include <string>
 #include <ctime>
+#include "TransactionType.h"
 
 class TransactionDetails {
 private:
-    std::string type;
+    TransactionType type;
     double amount;
     std::string description;
     std::time_t timestamp;
     std::string status;
+    std::string username; // Added to support global repository
 
 public:
-    TransactionDetails(const std::string& t, double a, const std::string& d, std::time_t ts, const std::string& s);
+    TransactionDetails(TransactionType t, double a, const std::string& d, 
+                      std::time_t ts, const std::string& s, const std::string& user);
+    
     std::string getDetails() const;
-    const std::string& getType() const { return type; }
+    TransactionType getType() const { return type; }
     double getAmount() const { return amount; }
     const std::time_t& getTimestamp() const { return timestamp; }
     const std::string& getStatus() const { return status; }
     const std::string& getDescription() const { return description; }
+    const std::string& getUsername() const { return username; }
 };
 
 #endif

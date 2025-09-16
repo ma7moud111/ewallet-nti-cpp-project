@@ -90,8 +90,8 @@ The application creates CSV files in the `data/` directory:
 **users.csv**:
 ```
 username,password
-alice,password123
-bob,mypassword
+mahmoud,password123
+sayed,mypassword
 ```
 
 **transactions.csv**:

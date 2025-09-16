@@ -97,9 +97,9 @@ bob,mypassword
 **transactions.csv**:
 ```
 type,amount,description,timestamp,status,username
-Deposit,100.00,Deposit transaction,1640995200,Completed,alice
-Transfer,25.50,Transfer to bob,1640995300,Completed,alice
-Transfer,-25.50,Transfer from alice,1640995300,Completed,bob
+Deposit,100.00,Deposit transaction,1640995200,Completed,mahmoud
+Transfer,25.50,Transfer to sayed,1640995300,Completed,mahmoud
+Transfer,-25.50,Transfer from mahmoud,1640995300,Completed,sayed
 ```
 
 ## Architecture
@@ -187,6 +187,3 @@ Manual testing scenarios:
 
 This project is created for educational purposes, but not free to modify and distribute as needed except with owner's permission (Mahmoud Sayed - ma7moud111).
 
-## Contact
-
-For questions or contributions, please refer to the project documentation or create an issue in the project repository.
